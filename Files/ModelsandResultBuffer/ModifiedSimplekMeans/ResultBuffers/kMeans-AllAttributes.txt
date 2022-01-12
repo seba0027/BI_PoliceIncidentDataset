@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     reWorked_PoliceIncident_Train-weka.filters.unsupervised.attribute.NumericToNominal-R2,10
+Instances:    692519
+Attributes:   10
+              Council District
+              Year of Occurrence
+              Month of Occurence
+              Day of the Week
+              Time of Occurrence
+              Person Involvement Type
+              Victim Type
+              Hate Crime Description
+              Zip Code
+Ignored:
+              Drug Related Incident
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 4
+Within cluster sum of squared errors: 3772631.0
+
+Initial starting points (random):
+
+Cluster 0: D14,2021,August,Sat,01:00,Victim,Individual,None,75201
+Cluster 1: D7,2018,March,Mon,23:00,Victim,Government,None,75227
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                       Cluster#
+Attribute                  Full Data          0          1
+                          (692519.0) (552103.0) (140416.0)
+==========================================================
+Council District                  D2         D2         D7
+Year of Occurrence              2019       2019       2018
+Month of Occurence              July     August      March
+Day of the Week                  Fri        Sat        Mon
+Time of Occurrence             19:00      01:00      23:00
+Person Involvement Type       Victim     Victim     Victim
+Victim Type               Individual Individual Government
+Hate Crime Description          None       None       None
+Zip Code                       75217      75217      75227
+
+
+
+
+Time taken to build model (full training data) : 1.4 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      552103 ( 80%)
+1      140416 ( 20%)
+
+
+Class attribute: Drug Related Incident
+Classes to Clusters:
+
+      0      1  <-- assigned to cluster
+ 537895 129729 | No
+  14208  10687 | Yes
+
+Cluster 0 <-- No
+Cluster 1 <-- Yes
+
+Incorrectly clustered instances :	143937.0	 20.7846 %
+

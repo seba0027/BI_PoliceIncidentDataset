@@ -1,0 +1,50 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.FarthestFirst -N 2 -S 1
+Relation:     Train_PoliceIncident-weka.filters.unsupervised.attribute.NumericToNominal-R1,4,5,7,9,18
+Instances:    692519
+Attributes:   18
+              Watch
+              Type of Incident
+              Type of Location
+              Reporting Area
+              Beat
+              Division
+              Sector
+              Council District
+              Year of Occurrence
+              Month of Occurence
+              Day of the Week
+              Time of Occurrence
+              Person Involvement Type
+              Victim Type
+              Hate Crime Description
+              Drug Related Incident
+              Penal Code
+              Zip Code
+Test mode:    user supplied test set: 114490 instances
+
+
+=== Clustering model (full training set) ===
+
+
+FarthestFirst
+==============
+
+Cluster centroids:
+
+Cluster 0
+	 2 THEFT OF PROP > OR EQUAL $100 <$750 (NOT SHOPLIFT) PC31.03(e2A) Single Family Residence - Vacant 1069 245 NORTHEAST 240 D10 2018 August Wed 11:00 Victim Individual None No PC 31.03(e)(2)(A) 75238
+Cluster 1
+	 3 UNAUTHORIZED USE OF MOTOR VEH - TRUCK OR BUS Convenience Store 6060 533 NORTHWEST 530 D6 2016 June Sat 12:30 Registered Owner Business Unknown No PC 31.07 75229
+
+
+
+Time taken to build model (full training data) : 0.92 seconds
+
+=== Evaluation on test set ===
+Clustered Instances
+
+0      104613 ( 91%)
+1        9877 (  9%)
+

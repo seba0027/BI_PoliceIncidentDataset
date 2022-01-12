@@ -1,0 +1,90 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     Train_PoliceIncident-weka.filters.unsupervised.attribute.NumericToNominal-R1,4,5,7,9,18
+Instances:    692519
+Attributes:   18
+              Watch
+              Type of Location
+              Reporting Area
+              Beat
+              Division
+              Sector
+              Council District
+              Year of Occurrence
+              Month of Occurence
+              Day of the Week
+              Time of Occurrence
+              Person Involvement Type
+              Victim Type
+              Hate Crime Description
+              Penal Code
+              Zip Code
+Ignored:
+              Type of Incident
+              Drug Related Incident
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 4
+Within cluster sum of squared errors: 7836861.0
+
+Initial starting points (random):
+
+Cluster 0: 2,'Apartment Parking Lot',1183,145,CENTRAL,140,D14,2019,June,Sun,20:00,'Registered Owner',Individual,None,'PC 31.07',75214
+Cluster 1: 1,'Business Office',1159,143,CENTRAL,140,D14,2020,July,Wed,16:30,Victim,Business,None,'PC 28.03(b)(2)',75206
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                                                         Cluster#
+Attribute                                                    Full Data                          0                          1
+                                                            (692519.0)                 (427294.0)                 (265225.0)
+============================================================================================================================
+Watch                                                                1                          2                          1
+Type of Location                            Highway, Street, Alley ETC Highway, Street, Alley ETC Highway, Street, Alley ETC
+Reporting Area                                                    1217                       1217                       3059
+Beat                                                               521                        318                        521
+Division                                                     NORTHEAST                  NORTHEAST                  NORTHWEST
+Sector                                                             530                        250                        530
+Council District                                                    D2                         D2                         D6
+Year of Occurrence                                                2019                       2019                       2020
+Month of Occurence                                                July                       June                       July
+Day of the Week                                                    Fri                        Sun                        Wed
+Time of Occurrence                                               00:00                      20:00                      00:00
+Person Involvement Type                                         Victim                     Victim                     Victim
+Victim Type                                                 Individual                 Individual                 Individual
+Hate Crime Description                                            None                       None                       None
+Penal Code                                                  No Offense                   PC 31.07                 No Offense
+Zip Code                                                         75217                      75243                      75220
+
+
+
+
+Time taken to build model (full training data) : 1.78 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      427294 ( 62%)
+1      265225 ( 38%)
+
+
+Class attribute: Drug Related Incident
+Classes to Clusters:
+
+      0      1  <-- assigned to cluster
+ 412246 255378 | No
+  15048   9847 | Yes
+
+Cluster 0 <-- No
+Cluster 1 <-- Yes
+
+Incorrectly clustered instances :	270426.0	 39.0496 %
+

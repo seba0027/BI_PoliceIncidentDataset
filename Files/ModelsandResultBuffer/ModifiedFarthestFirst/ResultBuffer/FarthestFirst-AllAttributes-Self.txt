@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.FarthestFirst -N 2 -S 1
+Relation:     reWorked_PoliceIncident_Train-weka.filters.unsupervised.attribute.NumericToNominal-R2,10
+Instances:    692519
+Attributes:   10
+              Council District
+              Year of Occurrence
+              Month of Occurence
+              Day of the Week
+              Time of Occurrence
+              Person Involvement Type
+              Victim Type
+              Hate Crime Description
+              Zip Code
+Ignored:
+              Drug Related Incident
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+FarthestFirst
+==============
+
+Cluster centroids:
+
+Cluster 0
+	 D3 2014 September Thu 13:00 Victim Individual None 75232
+Cluster 1
+	 D6 2017 July Mon 01:00 Other Business Unknown 75247
+
+
+
+Time taken to build model (full training data) : 0.43 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      674253 ( 97%)
+1       18266 (  3%)
+
+
+Class attribute: Drug Related Incident
+Classes to Clusters:
+
+      0      1  <-- assigned to cluster
+ 649691  17933 | No
+  24562    333 | Yes
+
+Cluster 0 <-- No
+Cluster 1 <-- Yes
+
+Incorrectly clustered instances :	42495.0	  6.1363 %
+
